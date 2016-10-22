@@ -7,7 +7,7 @@ from primes1 import is_prime
 
 from primes1 import primes_up_to
 
-prime_digits0 = [n for n in primes_up_to(10) if (len(str(n)) == 1)]
+prime_digits0 = [n for n in primes_up_to(100) if (len(str(n)) == 2)]
 
 prime_digits = prime_digits0 * 10
 
@@ -18,7 +18,7 @@ __dict__ = {}
 random.seed(int(time.time()))
 num = 0
 while (num < 100):
-    n = int(''.join(['%d'%(random.choice(prime_digits)) for n in xrange(3)]))
+    n = int(''.join(['%d'%(random.choice(prime_digits)) for n in xrange(4)]))
     
     if (__dict__.has_key(n)):
         num -= 1
